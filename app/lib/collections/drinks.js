@@ -100,3 +100,18 @@ DrinksIndex = new EasySearch.Index({
   fields: ['name'],
   engine: new EasySearch.MongoDB({})
 });
+
+Drinks.allow({
+insert: function () {
+    return true;
+},
+
+remove: function (){
+    return true;
+},
+
+update: function() {
+    return true;
+}
+
+});
