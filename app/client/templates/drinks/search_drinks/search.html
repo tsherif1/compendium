@@ -1,0 +1,22 @@
+<template name="search">
+    {{> EasySearch.Input index=drinksIndex }}
+    <ul>
+        {{#EasySearch.Each index=drinksIndex}}
+        <tr>
+          <li>
+          <td>Name: {{name}} </td>
+          <td>Tagline: {{tagline}} </td>
+          <td>Family: {{family}} </td>
+          <td>Ingredients: {{#each ingredient}}
+            {{name}} /
+            {{/each}} </td>
+          </li>
+        </tr>
+        {{/EasySearch.Each}}
+    </ul>
+<!--    {{> EasySearch.LoadMore index=drinksIndex}}
+   {{#EasySearch.IfNoResults index=drinksIndex}}
+    <div class="no-results">No results found!</div>
+  {{/EasySearch.IfNoResults}}
+-->
+</template>

@@ -1,22 +1,5 @@
 Drinks = new Mongo.Collection('drinks');
 
-
-if (Meteor.isServer) {
-  Drinks.allow({
-    insert: function (userId, doc) {
-      return true;
-    },
-
-    update: function (userId, doc, fieldNames, modifier) {
-      return true;
-    },
-
-    remove: function (userId, doc) {
-      return true;
-    }
-  });
-}
-
 Drinks.attachSchema(new SimpleSchema({
   'name': {
     type: String,
@@ -111,3 +94,9 @@ Drinks.attachSchema(new SimpleSchema({
     optional: true
   }
 }));
+
+DrinksIndex = new EasySearch.Index({
+  collection: Drinks,
+  fields: ['name'],
+  engine: new EasySearch.MongoDB({})
+});

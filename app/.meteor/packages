@@ -22,3 +22,6 @@ aldeed:collection2
 twbs:bootstrap
 aldeed:delete-button
 meteorhacks:search-source
+easy:search
+accounts-ui
+accounts-password

@@ -1,27 +1,27 @@
+
 /*****************************************************************************/
 /* Home: Event Handlers */
 /*****************************************************************************/
-/*
-Template.Home.events({
+Template.search.events({
 });
 
 /*****************************************************************************/
 /* Home: Helpers */
 /*****************************************************************************/
-/*
-Template.Home.helpers({
+Template.search.helpers({
+    drinksIndex: () => DrinksIndex
 });
+
 /*****************************************************************************/
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
-/*
-Template.Home.onCreated(function () {
+Template.search.onCreated(function () {
 });
 
-Template.searchBox.onRendered(function () {
+Template.search.onRendered(function () {
+  console.log("createdddd");
 });
 
 
-Template.Home.onDestroyed(function () {
+Template.search.onDestroyed(function () {
 });
-*/
